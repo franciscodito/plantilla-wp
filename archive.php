@@ -33,14 +33,7 @@
                             <h4><?php the_title(); ?></h4>
                         </a>
                     </div>
-                    <?php endwhile; ?>
-
-                    <?php else: ?>
-
-                    <h5>No se encontró el término: 
-                    <?php printf(esc_html('%s'), get_search_query()); ?>
-                    </h5>
-                    <?php get_search_form(); ?>        
+                    <?php endwhile; ?>      
 
                     <?php endif; ?>
                     </div>
