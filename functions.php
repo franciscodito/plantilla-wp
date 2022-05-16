@@ -14,7 +14,18 @@ function temauno_setup(){
         add_theme_support( 'post-thumbnails' );
      }
      add_theme_support( 'title-tag' );
-}
+     add_theme_support( 'custom-logo', array(
+      'height'               => 100,
+      'width'                => 400,
+      'flex-height'          => true,
+      'flex-width'           => true,
+      'header-text'          => array( 'site-title', 'site-description' ),
+      'unlink-homepage-logo' => true,
+      ) );
+     add_theme_support( 'automatic-feed-links' );
+     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+     add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+  }
 add_action( 'after_setup_theme', 'temauno_setup' );
 
 function temauno_add_theme_scripts() {
@@ -51,8 +62,8 @@ function temauno_add_theme_scripts() {
  function temauno_register_my_menus() {
     register_nav_menus(
       array(
-        'main-menu' => __( 'Menú principal' ),
-        'extra-menu' => __( 'Menú extra' )
+        'main-menu' => __( 'Menú principal', 'temauno' ),
+        'extra-menu' => __( 'Menú extra', 'temauno' )
        )
      );
    }
