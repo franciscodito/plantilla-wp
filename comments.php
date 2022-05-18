@@ -1,4 +1,4 @@
-<h5>Comentarios... <?php comments_number( 'no existen comentarios.', '1 comentario', '% comentarios' ); ?>.</h5>
+<h6>Comentarios... <?php comments_number( 'No existen comentarios.', '1 comentario', '% comentarios' ); ?>.</h6>
 <hr>
 
 <?php comment_form(); ?>
